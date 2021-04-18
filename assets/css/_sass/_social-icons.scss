@@ -76,3 +76,8 @@ $rss-color: #ff6600;
   padding: 5px;
   @include social-media-icon($rss-color, $icon-transition-time);
 }
+
+.fa-telegram {
+  padding: 5px;
+  @include social-media-icon($rss-color, $icon-transition-time);
+}
