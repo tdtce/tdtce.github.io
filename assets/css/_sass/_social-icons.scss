@@ -10,6 +10,7 @@ $pinterest-color: #bd081c;
 $medium-color: #00AB6C;
 $codepen-color: black;
 $rss-color: #ff6600;
+$telegram-color: black;
 
 @mixin social-media-icon($color, $transition){
   -webkit-transition: $transition;
@@ -79,5 +80,5 @@ $rss-color: #ff6600;
 
 .fa-telegram {
   padding: 5px;
-  @include social-media-icon($rss-color, $icon-transition-time);
+  @include social-media-icon($telegram-color, $icon-transition-time);
 }
