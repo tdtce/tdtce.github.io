@@ -1,48 +1,23 @@
-# Site Info
-title:              "The Plain"
-description:        "A minimalist Jekyll theme"
-author_name:        "Heiswayi Nrird" # change this to your name
-logo_url:           https://avatars0.githubusercontent.com/u/13794983?v=4 # Get it from GitHub API: https://api.github.com/users/<username>
+# Site Build Settings
 
-# Site Settings
-url:                https://heiswayi.github.io # main url
-baseurl:            /the-plain
-permalink:          /:title # Post permalink
-timezone:           Asia/Kuala_Lumpur # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-mathjax:            true  # enables support for mathjax - set to 'false' to disable
+# jekyll-paginate configuration
+paginate:            5
 
-# Site Build
-highlighter:        rouge
-markdown:           kramdown
-kramdown:
-    input:          GFM
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+
 sass:
-    style:          :compressed
+  sass_dir: assets/css
+  style: :nested
 
-# Other Params
-include:            [ "robots.txt" ]
-exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "script" ]
-plugins:
-  - jekyll-sitemap
+# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+title:		           "Millennial"
+description:	       "a Jekyll theme for running a blog or publication"
+author:              "Paul Le"
 
-plugins:
-  - jekyll-remote-theme
-
-remote_theme: heiswayi/the-plain
-
-defaults:
-  -
-    scope:
-      path:         ""
-    values:
-      layout:       "null"
-  -
-    scope:
-      type:         "pages"
-    values:
-      layout:       "page"
-  -
-    scope:
-      type:         "posts"
-    values:
-      layout:       "post"
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+#  path: rss-feed.xml
